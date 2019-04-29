@@ -1,24 +1,22 @@
+//bindings
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CalendarDani from './CalendarDani';
+import NavBarDani from './NavBarDani';
+import ToggableMenu from './ToggableMenu';
 
 function App() {
+  var userName = "Paco y Pepe " + Math.random();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <RaulCoolButton>Hola</RaulCoolButton> */}
+      <h1>Hola qué tal</h1>
+      <ToggableMenu nameIronhacker="fede"></ToggableMenu>
+      <ToggableMenu nameIronhacker="laura"></ToggableMenu>
+      <button>Test</button>
+      <NavBarDani user={userName} color="green" />
+      <CalendarDani />
     </div>
   );
 }
